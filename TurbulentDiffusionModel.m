@@ -13,11 +13,11 @@ Qac=0.2;           % Circulator flowrate (m3/s)
 % Allocate imported array to column variable names
 data= xlsread('/Inputdata.xlsx','Input','B2:K19753','',@convertSpreadsheetExcelDates);
 
-Ta_Input = data(:,1);     % Reporated air temperature (C)
-Uwi_Input = data(:,2);    % Reporated wind speed (m/s)
-Jsn_Input = data(:,3);    % Reporated solar radiation (W/m2)
-RH_Input = data(:,4);     % Reporated relative humidity
-Depth_Input = data(:,5);  % Reporated lake depth (m)
+Ta_Input = data(:,1);     % Reported air temperature (C)
+Uwi_Input = data(:,2);    % Reported wind speed (m/s)
+Jsn_Input = data(:,3);    % Reported solar radiation (W/m2)
+RH_Input = data(:,4);     % Reported relative humidity
+Depth_Input = data(:,5);  % Reported lake depth (m)
 sd_Input = data(:,6);     % Field measured secchi depth (m)
 CL_Input = data(:,7);     % Fraction of the sky covered with clouds
 theta_Input = data(:,8);  % Reporated wind direction (degree)
@@ -89,7 +89,7 @@ ea=RH.*4.596.*exp(17.27.*Ta./(Ta+237.3));  % Calculation of air vapor pressure (
 Jar=11.7.*10.^(-8).*(Ta+273).^4.*(1+0.17.*(CL).^2).*(A+0.031.*(ea).^0.5).*(1-0.03); % Calculation of air longwave radiation (Jar) (Ly/d)      
 fUw=19+0.95.*Uw.^2; % Calculation of fUw, which represents the dependence of wind speed transfer on water surface  
 
-% Looping through time
+% Calculating variables for every time step
 for i=2:nt+1
 
 ro(i-1,:)=999.842594+6.793952*10.^(-2)*(Tw(i-1,:))-9.09529*10.^(-3)*(Tw(i-1,:)).^2+1.001685*10.^(-4)*(Tw(i-1,:)).^3-...
@@ -147,9 +147,9 @@ end %end loop through time
 
 % Plot of hourly mean water temperature at various depths
 Tw_output00= mean(reshape(Tw(2:end,1),Multiplier,[]))';   % Calculated water temperature at surface
-Tw_output20= mean(reshape(Tw(2:end,3),Multiplier,[]))';   % Calculated water temperature at 20% od total depth
-Tw_output40= mean(reshape(Tw(2:end,6),Multiplier,[]))';   % Calculated water temperature at 40% od total depth
-Tw_output60= mean(reshape(Tw(2:end,9),Multiplier,[]))';   % Calculated water temperature at 60% od total depth
+Tw_output20= mean(reshape(Tw(2:end,3),Multiplier,[]))';   % Calculated water temperature at 20% of total depth
+Tw_output40= mean(reshape(Tw(2:end,6),Multiplier,[]))';   % Calculated water temperature at 40% of total depth
+Tw_output60= mean(reshape(Tw(2:end,9),Multiplier,[]))';   % Calculated water temperature at 60% of total depth
 figure()
 subplot(4,1,1);
 plot(1:length(Tw_output00),Tw_output00)
