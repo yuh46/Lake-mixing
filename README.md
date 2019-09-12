@@ -9,7 +9,7 @@ Purpose of this software package is to characterize vertical mixing and assess t
 
 ## Folder structure
 
-Source code of the turbulent diffusion model is stored in the file *TurbulentDiffusionModel*, and the example input data file is in *Inputdata*.
+Source code of the turbulent diffusion model is stored in the file *TurbulentDiffusionModel.m*, and the example input data file is in *Inputdata.xlsx*.
 
 ## Prerequisites
 
@@ -20,11 +20,7 @@ TBD
 ### Model set-up
 
 1. Parameter values listed under the *User defined parameters* are calibrated values for Jordan Lake study area. 
-2. Updating path of the stored files
-
-```make
-data= xlsread('**UPDATE PATH**/Inputdata.xlsx','Input','B2:K19753','',@convertSpreadsheetExcelDates);
-```
+2. Make sure both source code and input file are stored in same folder.
 
 ### Running the model
 
