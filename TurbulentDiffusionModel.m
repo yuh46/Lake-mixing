@@ -7,7 +7,7 @@ A=0.68;            % Atmospheric emissivity coefficient (calibrated)
 c_Uw=0.98;         % Cross wind scaling coefficient (calibrated)
 c_MC=0.91;         % Microclimate coefficient (calibrated)
 D_BG=5.8*10^(-6);  % Background diffusion coefficient (m2/s) (calibrated)
-Ae=300*300;        % Circulator application areas (m2) per unit
+Ae=300*300;        % Circulator treatment zone (m2) per unit
 Qac=0.2;           % Circulator flowrate (m3/s)
 
 % Allocate imported array to column variable names
