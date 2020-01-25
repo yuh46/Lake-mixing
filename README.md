@@ -28,8 +28,8 @@ The model is then run and will generate figures to visualize results (e.g., wate
 
 ## References 
 
-Han, Y.; Smithheart, J.W.; Smyth, R.L.; Aziz, T.N.; Obenour, D.R. (*in review*). **Assessing Vertical Mixing as a Potential Control on Cyanobacteria
-Dominance in Shallow Turbid Reservoirs**. *Lake and Reservoir Management*.
+Han, Y.; Smithheart, J.W.; Smyth, R.L.; Aziz, T.N.; Obenour, D.R. (2019). **Assessing Vertical Mixing as a Potential Control on Cyanobacteria
+Dominance in Shallow Turbid Reservoirs**. *Lake and Reservoir Management*, 1-17.
 
 ## Acknowledgements
 
